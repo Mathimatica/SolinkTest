@@ -2,7 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kapt)
+    alias(libs.plugins.ksp)
     id("com.google.dagger.hilt.android")
     id("org.jetbrains.kotlin.plugin.serialization")
 }
@@ -58,11 +58,12 @@ dependencies {
     implementation(libs.kotlin.coroutines.core)
     implementation(libs.kotlin.coroutines.android)
     implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
     implementation(libs.kotlin.serialization)
     implementation(libs.coil.image)
     implementation(libs.media3.video)
     implementation(libs.media3.ui)
+
+    ksp(libs.hilt.compiler)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

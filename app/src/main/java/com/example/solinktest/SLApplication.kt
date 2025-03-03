@@ -8,6 +8,5 @@ import javax.inject.Inject
 
 @HiltAndroidApp
 class SLApplication : Application() {
-    // TODO Delete when https://github.com/google/dagger/issues/3601 is resolved.
     @Inject @ApplicationContext lateinit var context: Context
 }
